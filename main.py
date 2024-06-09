@@ -18,7 +18,14 @@ def count_characters(text):
 
               
     return character
-               
+
+def convert_to_list(char_dict):
+    char_list =  []
+    for letter, count in char_dict.items():
+        char_list.append({"character": letter, "num": count})
+    
+    return char_list
+
 
                
          
@@ -45,6 +52,7 @@ def main():
         words = count_words(file_contents)
 
         letters = count_characters(file_contents)
+        
 
         print(letters)
 
